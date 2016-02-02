@@ -1,1 +1,0 @@
-# Telescope_Receiver
