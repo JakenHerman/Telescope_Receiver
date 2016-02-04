@@ -36,13 +36,13 @@ public class Telescope_Receiver extends generic_stack{
         
         else if ((stackType.equalsIgnoreCase("int")) || (stackType.equalsIgnoreCase("integer"))){
             generic_stack<Integer> intStack = new generic_stack();
-            intStack.push(2);
+            generic_stack.setMax(max);
         }
         
         else {
             System.out.println("Invalid stack type. Stack has defaulted to String type.");
               generic_stack<String> stringStack = new generic_stack(); 
-              stringStack.push("Default string push successfull");
+              generic_stack.setMax(max);
         }
            
     }
