@@ -13,12 +13,12 @@ package telescope_receiver;
 public class generic_stack<T> {
     
     static int max; //size of stack
-    private String stackType; //type of stack
-    private int[] stackArray;
     private int top;
-
+    private int EMPTY = -1;
+    private T stackArray[];
+    
     private void main(){
-        
+        top = EMPTY;
     }
     
     static void setMax(int userMax){
@@ -26,7 +26,35 @@ public class generic_stack<T> {
     }
 
     void push(T x){
-        System.out.println(x);
+        if(top < (max -1)){
+            stackArray[++top] = x;
+        }
     }
     
+    void pop(){
+        if (top != EMPTY){
+            System.out.println(stackArray[top--] + " has been popped from the stack");
+        }
+        else {
+            System.out.println(0);
+        }
+    }
+    
+    boolean empty(){
+        if (top == EMPTY){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    boolean full(){
+        if (top == (max - 1)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
